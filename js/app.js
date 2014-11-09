@@ -1,7 +1,16 @@
-/* 
-    app.js
-    Angular application for the address book challenge
+"use strict"
 
-    Add code here to create a new Angular application and controller.
-    The array of employee objects is already in a global variable named 'pawneeEmployees'
-*/
+var addressModule = angular.module('AddressBook', []);
+addressModule.controller('AddressController', function($scope) {
+    $scope.employees = pawneeEmployees;
+    $scope.order = 'lastName';
+    $scope.sortCol = 'lastName';
+    $scope.sortBy = function(sortCol) {
+        if ($scope.sortCol == sortCol) {
+            $scope.sortReverse = !$scope.sortReverse;
+        } else {
+            $scope.sortReverse = false;
+        }
+        $scope.sortCol = sortCol;
+    }
+});
