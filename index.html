@@ -38,7 +38,7 @@
                         <!-- this img should show the employee picture -->
                         <img ng-src="{{employee.picUrl}}" alt="picture of {{employee.firstName}} {{employee.lastName}}">
                         <div class="details">
-                            <h2 class="name">{{employee.firstName+" "+employee.lastName}}</h2>
+                            <h2 class="name">{{employee.firstName + " " + employee.lastName}}</h2>
                             <p class="title"> {{employee.title}}</p>
                             <p class="department">{{employee.department}}</p>
                             <p class="phone"><a ng-if="employee.phone" href="tel:{{employee.phone}}">{{employee.phone}}</a></p>
