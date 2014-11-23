@@ -1,6 +1,7 @@
 "use strict"
 
 var addressModule = angular.module('AddressBook', []);
+
 addressModule.controller('AddressController', function($scope) {
     $scope.employees = pawneeEmployees;
     $scope.order = 'lastName';
